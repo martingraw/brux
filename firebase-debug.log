@@ -1,0 +1,64 @@
+[debug] [2025-03-05T02:53:40.527Z] ----------------------------------------------------------------------
+[debug] [2025-03-05T02:53:40.528Z] Command:       /opt/homebrew/Cellar/node/23.7.0/bin/node /opt/homebrew/bin/firebase deploy
+[debug] [2025-03-05T02:53:40.528Z] CLI Version:   13.32.0
+[debug] [2025-03-05T02:53:40.528Z] Platform:      darwin
+[debug] [2025-03-05T02:53:40.528Z] Node Version:  v23.7.0
+[debug] [2025-03-05T02:53:40.529Z] Time:          Tue Mar 04 2025 18:53:40 GMT-0800 (Pacific Standard Time)
+[debug] [2025-03-05T02:53:40.529Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-03-05T02:53:40.605Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-03-05T02:53:40.606Z] > authorizing via signed-in user (bruxnightguard@gmail.com)
+[debug] [2025-03-05T02:53:40.606Z] [iam] checking project brux-web-rotate for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-03-05T02:53:40.606Z] Checked if tokens are valid: true, expires at: 1741144995597
+[debug] [2025-03-05T02:53:40.606Z] Checked if tokens are valid: true, expires at: 1741144995597
+[debug] [2025-03-05T02:53:40.606Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/brux-web-rotate:testIamPermissions [none]
+[debug] [2025-03-05T02:53:40.606Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/brux-web-rotate:testIamPermissions x-goog-quota-user=projects/brux-web-rotate
+[debug] [2025-03-05T02:53:40.607Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/brux-web-rotate:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-03-05T02:53:40.893Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/brux-web-rotate:testIamPermissions 200
+[debug] [2025-03-05T02:53:40.893Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/brux-web-rotate:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-03-05T02:53:40.893Z] Checked if tokens are valid: true, expires at: 1741144995597
+[debug] [2025-03-05T02:53:40.894Z] Checked if tokens are valid: true, expires at: 1741144995597
+[debug] [2025-03-05T02:53:40.894Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/brux-web-rotate [none]
+[debug] [2025-03-05T02:53:41.063Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/brux-web-rotate 200
+[debug] [2025-03-05T02:53:41.064Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/brux-web-rotate {"projectId":"brux-web-rotate","projectNumber":"768172341938","displayName":"BRUX Web Rotate","name":"projects/brux-web-rotate","resources":{"hostingSite":"brux-web-rotate"},"state":"ACTIVE","etag":"1_e1962371-d94e-4fd6-a428-3ddc9748d0c3"}
+[info] 
+[info] === Deploying to 'brux-web-rotate'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2025-03-05T02:53:41.070Z] Checked if tokens are valid: true, expires at: 1741144995597
+[debug] [2025-03-05T02:53:41.070Z] Checked if tokens are valid: true, expires at: 1741144995597
+[debug] [2025-03-05T02:53:41.070Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/brux-web-rotate/versions [none]
+[debug] [2025-03-05T02:53:41.070Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/brux-web-rotate/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2025-03-05T02:53:42.306Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/brux-web-rotate/versions 200
+[debug] [2025-03-05T02:56:52.083Z] ----------------------------------------------------------------------
+[debug] [2025-03-05T02:56:52.085Z] Command:       /opt/homebrew/Cellar/node/23.7.0/bin/node /opt/homebrew/bin/firebase deploy
+[debug] [2025-03-05T02:56:52.085Z] CLI Version:   13.32.0
+[debug] [2025-03-05T02:56:52.085Z] Platform:      darwin
+[debug] [2025-03-05T02:56:52.085Z] Node Version:  v23.7.0
+[debug] [2025-03-05T02:56:52.085Z] Time:          Tue Mar 04 2025 18:56:52 GMT-0800 (Pacific Standard Time)
+[debug] [2025-03-05T02:56:52.085Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-03-05T02:56:52.161Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-03-05T02:56:52.161Z] > authorizing via signed-in user (bruxnightguard@gmail.com)
+[debug] [2025-03-05T02:56:52.161Z] [iam] checking project brux-web-rotate for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-03-05T02:56:52.162Z] Checked if tokens are valid: true, expires at: 1741144995597
+[debug] [2025-03-05T02:56:52.162Z] Checked if tokens are valid: true, expires at: 1741144995597
+[debug] [2025-03-05T02:56:52.162Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/brux-web-rotate:testIamPermissions [none]
+[debug] [2025-03-05T02:56:52.162Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/brux-web-rotate:testIamPermissions x-goog-quota-user=projects/brux-web-rotate
+[debug] [2025-03-05T02:56:52.162Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/brux-web-rotate:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-03-05T02:56:52.419Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/brux-web-rotate:testIamPermissions 200
+[debug] [2025-03-05T02:56:52.419Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/brux-web-rotate:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-03-05T02:56:52.419Z] Checked if tokens are valid: true, expires at: 1741144995597
+[debug] [2025-03-05T02:56:52.419Z] Checked if tokens are valid: true, expires at: 1741144995597
+[debug] [2025-03-05T02:56:52.419Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/brux-web-rotate [none]
+[debug] [2025-03-05T02:56:52.621Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/brux-web-rotate 200
+[debug] [2025-03-05T02:56:52.622Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/brux-web-rotate {"projectId":"brux-web-rotate","projectNumber":"768172341938","displayName":"BRUX Web Rotate","name":"projects/brux-web-rotate","resources":{"hostingSite":"brux-web-rotate"},"state":"ACTIVE","etag":"1_e1962371-d94e-4fd6-a428-3ddc9748d0c3"}
+[info] 
+[info] === Deploying to 'brux-web-rotate'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2025-03-05T02:56:52.629Z] Checked if tokens are valid: true, expires at: 1741144995597
+[debug] [2025-03-05T02:56:52.629Z] Checked if tokens are valid: true, expires at: 1741144995597
+[debug] [2025-03-05T02:56:52.629Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/brux-web-rotate/versions [none]
+[debug] [2025-03-05T02:56:52.629Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/brux-web-rotate/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2025-03-05T02:56:53.681Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/brux-web-rotate/versions 200

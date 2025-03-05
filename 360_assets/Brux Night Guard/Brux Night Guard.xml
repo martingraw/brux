@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <settings>
+    <preloader image="images/brux-night-guard-0.png" />
+    <userInterface showProgressPulse="false" showZoomButtons="true" showToolTips="true" showHotspotsButton="true" showFullScreenButton="true" showTogglePlayButton="true" showArrows="true" toolbarAlign="center" toolbarBackColor="#FFFFFF" toolbarHoverColor="#808285" toolbarForeColor="#A7A9AE" toolbarBackAlpha="1" toolbarAlpha="1" showProgressNumbers="true" showFullScreenToolbar="false" fullScreenBackColor="transparent" toolbarPosition="0" customCursorClass="arrow_zoom_cursor" viewerHint="" toolbarAutohide="false" showToolbarOnLoadStart="false" showProgressBar="true" skin="basic" />
+    <control dragSpeed="0.13" doubleClickZooms="true" disableMouseControl="false" showHighresOnFullScreen="true" mouseHoverDrag="false" hideHotspotsOnLoad="false" hideHotspotsOnZoom="false" rowSensitivity="15" dragSensitivity="10" inBrowserFullScreen="false" doubleClickFullscreen="false" zoomSteps="1" zoomSpeed="300" singleClickZooms="false" pauseOnPreload="false" resumePreloadOnHover="false" mouseWheelDrag="false" mouseWheelDragZoomOnly="false" allowRotateInputInZoom="false" allowPanX="true" allowPanY="true" dragAcceleration="1" centerZoom="false" maxZoom="100" responsiveBaseWidth="700" />
+    <rotation firstImage="0" rotate="false" rotatePeriod="7" bounce="false" rotateDirection="1" forceDirection="false" inertiaRelToDragSpeed="true" inertiaTimeToStop="700" inertiaMaxInterval="120" useInertia="true" flipHorizontalInput="false" flipVerticalInput="false" bounceRows="true" rowsOnSingleIndex="false" flipAxis="false" spinOnPageScroll="false" pageScrollFollow="false" pageScrollDelay="300" pageScrollPeriod="3" autoPlayOnDragRelease="false" />
+  </settings>
+  <hotspots>
+    <hotspot id="spot2" renderMode="0" indicatorImage="circ-cross-thick-blue.svg" activateOnClick="true" effects="pulseSimple,2000" margin="0,0,0,0" align="top,center">
+      <spotinfo txt="Brux is made from food grade materials that are BPA-free, non-toxic and safe for use as an oral appliance. &#xA;&#xA;" css="font-family:Arial;font-size:13px;color:#333333;width:300px;padding:15px 15px;border:1px solid #EEEEEE;background-color:rgba(255,255,255,1);" />
+    </hotspot>
+    <hotspot id="spot3" renderMode="0" indicatorImage="circ-cross-thick-blue.svg" activateOnClick="true" effects="pulseSimple,2000" margin="0,0,0,0" align="top,center">
+      <spotinfo txt="Soft blue inner material for maximum comfort.&#xA;" css="font-family:Arial;font-size:13px;color:#333333;width:300px;padding:15px 15px;border:1px solid #EEEEEE;background-color:rgba(255,255,255,1);" />
+    </hotspot>
+  </hotspots>
+  <images rows="1" highresWidth="702" highresHeight="586">
+    <image src="images/brux-night-guard-0.png">
+      <hotspot source="spot2" offsetX="457" offsetY="242" />
+      <hotspot source="spot3" offsetX="300" offsetY="207" />
+      <highres src="images/highres/brux-night-guard-0.png" />
+    </image>
+    <image src="images/brux-night-guard-1.png">
+      <hotspot source="spot2" offsetX="450" offsetY="246" />
+      <hotspot source="spot3" offsetX="293" offsetY="208" />
+      <highres src="images/highres/brux-night-guard-1.png" />
+    </image>
+    <image src="images/brux-night-guard-2.png">
+      <hotspot source="spot2" offsetX="463" offsetY="250" />
+      <hotspot source="spot3" offsetX="286" offsetY="209" />
+      <highres src="images/highres/brux-night-guard-2.png" />
+    </image>
+    <image src="images/brux-night-guard-3.png">
+      <hotspot source="spot2" offsetX="458" offsetY="258" />
+      <hotspot source="spot3" offsetX="274" offsetY="206" />
+      <highres src="images/highres/brux-night-guard-3.png" />
+    </image>
+    <image src="images/brux-night-guard-4.png">
+      <highres src="images/highres/brux-night-guard-4.png" />
+    </image>
+    <image src="images/brux-night-guard-5.png">
+      <highres src="images/highres/brux-night-guard-5.png" />
+    </image>
+    <image src="images/brux-night-guard-6.png">
+      <highres src="images/highres/brux-night-guard-6.png" />
+    </image>
+    <image src="images/brux-night-guard-7.png">
+      <highres src="images/highres/brux-night-guard-7.png" />
+    </image>
+    <image src="images/brux-night-guard-8.png">
+      <highres src="images/highres/brux-night-guard-8.png" />
+    </image>
+    <image src="images/brux-night-guard-9.png">
+      <highres src="images/highres/brux-night-guard-9.png" />
+    </image>
+    <image src="images/brux-night-guard-10.png">
+      <highres src="images/highres/brux-night-guard-10.png" />
+    </image>
+    <image src="images/brux-night-guard-11.png">
+      <highres src="images/highres/brux-night-guard-11.png" />
+    </image>
+    <image src="images/brux-night-guard-12.png">
+      <highres src="images/highres/brux-night-guard-12.png" />
+    </image>
+    <image src="images/brux-night-guard-13.png">
+      <highres src="images/highres/brux-night-guard-13.png" />
+    </image>
+    <image src="images/brux-night-guard-14.png">
+      <highres src="images/highres/brux-night-guard-14.png" />
+    </image>
+    <image src="images/brux-night-guard-15.png">
+      <highres src="images/highres/brux-night-guard-15.png" />
+    </image>
+    <image src="images/brux-night-guard-16.png">
+      <highres src="images/highres/brux-night-guard-16.png" />
+    </image>
+    <image src="images/brux-night-guard-17.png">
+      <highres src="images/highres/brux-night-guard-17.png" />
+    </image>
+    <image src="images/brux-night-guard-18.png">
+      <highres src="images/highres/brux-night-guard-18.png" />
+    </image>
+    <image src="images/brux-night-guard-19.png">
+      <highres src="images/highres/brux-night-guard-19.png" />
+    </image>
+    <image src="images/brux-night-guard-20.png">
+      <highres src="images/highres/brux-night-guard-20.png" />
+    </image>
+    <image src="images/brux-night-guard-21.png">
+      <highres src="images/highres/brux-night-guard-21.png" />
+    </image>
+    <image src="images/brux-night-guard-22.png">
+      <highres src="images/highres/brux-night-guard-22.png" />
+    </image>
+    <image src="images/brux-night-guard-23.png">
+      <highres src="images/highres/brux-night-guard-23.png" />
+    </image>
+    <image src="images/brux-night-guard-24.png">
+      <highres src="images/highres/brux-night-guard-24.png" />
+    </image>
+    <image src="images/brux-night-guard-25.png">
+      <highres src="images/highres/brux-night-guard-25.png" />
+    </image>
+    <image src="images/brux-night-guard-26.png">
+      <highres src="images/highres/brux-night-guard-26.png" />
+    </image>
+    <image src="images/brux-night-guard-27.png">
+      <highres src="images/highres/brux-night-guard-27.png" />
+    </image>
+    <image src="images/brux-night-guard-28.png">
+      <highres src="images/highres/brux-night-guard-28.png" />
+    </image>
+    <image src="images/brux-night-guard-29.png">
+      <highres src="images/highres/brux-night-guard-29.png" />
+    </image>
+    <image src="images/brux-night-guard-30.png">
+      <highres src="images/highres/brux-night-guard-30.png" />
+    </image>
+    <image src="images/brux-night-guard-31.png">
+      <highres src="images/highres/brux-night-guard-31.png" />
+    </image>
+    <image src="images/brux-night-guard-32.png">
+      <highres src="images/highres/brux-night-guard-32.png" />
+    </image>
+    <image src="images/brux-night-guard-33.png">
+      <highres src="images/highres/brux-night-guard-33.png" />
+    </image>
+    <image src="images/brux-night-guard-34.png">
+      <highres src="images/highres/brux-night-guard-34.png" />
+    </image>
+    <image src="images/brux-night-guard-35.png">
+      <highres src="images/highres/brux-night-guard-35.png" />
+    </image>
+    <image src="images/brux-night-guard-36.png">
+      <highres src="images/highres/brux-night-guard-36.png" />
+    </image>
+    <image src="images/brux-night-guard-37.png">
+      <highres src="images/highres/brux-night-guard-37.png" />
+    </image>
+    <image src="images/brux-night-guard-38.png">
+      <highres src="images/highres/brux-night-guard-38.png" />
+    </image>
+    <image src="images/brux-night-guard-39.png">
+      <highres src="images/highres/brux-night-guard-39.png" />
+    </image>
+    <image src="images/brux-night-guard-40.png">
+      <highres src="images/highres/brux-night-guard-40.png" />
+    </image>
+    <image src="images/brux-night-guard-41.png">
+      <highres src="images/highres/brux-night-guard-41.png" />
+    </image>
+    <image src="images/brux-night-guard-42.png">
+      <highres src="images/highres/brux-night-guard-42.png" />
+    </image>
+    <image src="images/brux-night-guard-43.png">
+      <highres src="images/highres/brux-night-guard-43.png" />
+    </image>
+    <image src="images/brux-night-guard-44.png">
+      <highres src="images/highres/brux-night-guard-44.png" />
+    </image>
+    <image src="images/brux-night-guard-45.png">
+      <highres src="images/highres/brux-night-guard-45.png" />
+    </image>
+    <image src="images/brux-night-guard-46.png">
+      <hotspot source="spot2" offsetX="440" offsetY="227" />
+      <hotspot source="spot3" offsetX="327" offsetY="206" />
+      <highres src="images/highres/brux-night-guard-46.png" />
+    </image>
+    <image src="images/brux-night-guard-47.png">
+      <hotspot source="spot2" offsetX="450" offsetY="232" />
+      <hotspot source="spot3" offsetX="320" offsetY="207" />
+      <highres src="images/highres/brux-night-guard-47.png" />
+    </image>
+    <image src="images/brux-night-guard-48.png">
+      <hotspot source="spot2" offsetX="461" offsetY="233" />
+      <hotspot source="spot3" offsetX="309" offsetY="207" />
+      <highres src="images/highres/brux-night-guard-48.png" />
+    </image>
+  </images>
+</config>
