@@ -53,17 +53,12 @@ body, html
     background: transparent !important;
 }
 
-/* AGGRESSIVE white button forcing */
-.wr360_player img,
-.wr360_player .wr360_toolbar img,
-.wr360_player .wr360_toolbar a img,
-.wr360_player .wr360_toolbar button img {
+/* Force white ONLY on toolbar buttons - NOT product images */
+.wr360_player .wr360_toolbar img {
     filter: brightness(0) invert(1) !important;
     -webkit-filter: brightness(0) invert(1) !important;
 }
 
-.wr360_player svg,
-.wr360_player svg *,
 .wr360_player .wr360_toolbar svg,
 .wr360_player .wr360_toolbar svg * {
     fill: #ffffff !important;
@@ -71,25 +66,16 @@ body, html
 }
 
 /* Toolbar styling */
-.wr360_player .wr360_toolbar,
-.wr360_player .wr360_toolbar * {
+.wr360_player .wr360_toolbar {
     background: transparent !important;
 }
 
-/* Force all button elements white */
-.wr360_player a,
-.wr360_player button,
-.wr360_player .wr360_btn {
-    color: #ffffff !important;
-}
-
-/* Target play and arrow buttons specifically */
-[class*="play"],
-[class*="prev"],
-[class*="next"],
-[class*="arrow"],
-[class*="btn"] {
-    filter: brightness(0) invert(1) !important;
+/* Make sure product images are NOT filtered */
+.wr360_player canvas,
+.wr360_player .wr360_viewer img,
+.wr360_player .wr360_viewport img {
+    filter: none !important;
+    -webkit-filter: none !important;
 }
 	
 </style>
@@ -119,20 +105,24 @@ jQuery(document).ready(function(){
   resizePlayer();
   jQuery(window).on('resize', resizePlayer);
   
-  // AGGRESSIVE button color forcing after load
+  // Force white buttons ONLY in toolbar, not product images
   function forceWhiteButtons() {
-    jQuery('.wr360_player img').each(function() {
-      jQuery(this).css({
-        'filter': 'brightness(0) invert(1)',
-        '-webkit-filter': 'brightness(0) invert(1)'
-      });
+    // Only target toolbar images
+    jQuery('.wr360_player .wr360_toolbar img').css({
+      'filter': 'brightness(0) invert(1)',
+      '-webkit-filter': 'brightness(0) invert(1)'
     });
     
-    jQuery('.wr360_player svg, .wr360_player svg *').each(function() {
-      jQuery(this).css({
-        'fill': '#ffffff',
-        'stroke': '#ffffff'
-      });
+    // Only target toolbar SVGs
+    jQuery('.wr360_player .wr360_toolbar svg, .wr360_player .wr360_toolbar svg *').css({
+      'fill': '#ffffff',
+      'stroke': '#ffffff'
+    });
+    
+    // Ensure product images are NOT filtered
+    jQuery('.wr360_player canvas, .wr360_player .wr360_viewer img, .wr360_player .wr360_viewport img').css({
+      'filter': 'none',
+      '-webkit-filter': 'none'
     });
   }
   
@@ -140,10 +130,6 @@ jQuery(document).ready(function(){
   setTimeout(forceWhiteButtons, 100);
   setTimeout(forceWhiteButtons, 500);
   setTimeout(forceWhiteButtons, 1000);
-  setTimeout(forceWhiteButtons, 2000);
-  
-  // Also force on any click/interaction
-  jQuery('#wr360PlayerId').on('click', forceWhiteButtons);
 });
 </script>
 <!-- End of script copy / paste -->
