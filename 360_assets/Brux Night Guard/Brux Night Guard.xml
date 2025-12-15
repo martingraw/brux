@@ -10,7 +10,7 @@
   
 <background color="transparent" />
     <preloader image="images/brux-night-guard-0.png" />
-    <userInterface showProgressPulse="false" showZoomButtons="false" showToolTips="true" showHotspotsButton="false" showFullScreenButton="false" showTogglePlayButton="true" showArrows="true" toolbarAlign="center" toolbarBackColor="transparent" toolbarHoverColor="#808285" toolbarForeColor="#ffffff" toolbarBackAlpha="0" toolbarAlpha="1" showProgressNumbers="false" showFullScreenToolbar="false" fullScreenBackColor="transparent" toolbarPosition="-1" customCursorClass="arrow_zoom_cursor" viewerHint="" toolbarAutohide="false" showToolbarOnLoadStart="false" showProgressBar="false" skin="basic" />
+    <userInterface showProgressPulse="false" showZoomButtons="false" showToolTips="true" showHotspotsButton="false" showFullScreenButton="false" showTogglePlayButton="true" showArrows="true" toolbarAlign="center" toolbarBackColor="transparent" toolbarHoverColor="#ffffff" toolbarForeColor="#ffffff" toolbarBackAlpha="0" toolbarAlpha="1" showProgressNumbers="false" showFullScreenToolbar="false" fullScreenBackColor="transparent" toolbarPosition="-1" customCursorClass="arrow_zoom_cursor" viewerHint="" toolbarAutohide="false" showToolbarOnLoadStart="false" showProgressBar="false" skin="basic" />
 <control
   dragSpeed="0.13"
   doubleClickZooms="true"
