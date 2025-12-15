@@ -30,19 +30,19 @@ body, html
 	background: transparent;
 }
 
-/* Subtle circular platform ring - like original */
+/* Wide elliptical platform ring - matching original proportions */
 #content::before {
     content: '';
     position: absolute;
-    bottom: 5%;
+    bottom: 0%;
     left: 50%;
     transform: translateX(-50%);
-    width: 80%;
-    height: 8%;
+    width: 95%;
+    height: 15%;
     background: transparent;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.12);
     border-radius: 50%;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
     pointer-events: none;
     z-index: 1;
 }
@@ -53,34 +53,42 @@ body, html
     background: transparent !important;
 }
 
-/* Force white toolbar buttons - more specific selectors */
+/* AGGRESSIVE white button forcing */
+.wr360_player img,
+.wr360_player .wr360_toolbar img,
+.wr360_player .wr360_toolbar a img,
+.wr360_player .wr360_toolbar button img {
+    filter: brightness(0) invert(1) !important;
+    -webkit-filter: brightness(0) invert(1) !important;
+}
+
+.wr360_player svg,
+.wr360_player svg *,
 .wr360_player .wr360_toolbar svg,
-.wr360_player .wr360_toolbar path,
-.wr360_player .wr360_toolbar polygon,
-.wr360_player .wr360_toolbar circle,
-.wr360_player .wr360_toolbar rect,
-.wr360_player .wr360_toolbar line {
+.wr360_player .wr360_toolbar svg * {
     fill: #ffffff !important;
     stroke: #ffffff !important;
 }
 
-.wr360_player .wr360_toolbar img {
-    filter: brightness(0) invert(1) !important;
-}
-
 /* Toolbar styling */
-.wr360_player .wr360_toolbar {
+.wr360_player .wr360_toolbar,
+.wr360_player .wr360_toolbar * {
     background: transparent !important;
 }
 
-/* Target specific button classes if they exist */
-.wr360_play_btn,
-.wr360_prev_btn,
-.wr360_next_btn,
-.wr360_zoom_in_btn,
-.wr360_zoom_out_btn,
-.wr360_fullscreen_btn,
-.wr360_hotspots_btn {
+/* Force all button elements white */
+.wr360_player a,
+.wr360_player button,
+.wr360_player .wr360_btn {
+    color: #ffffff !important;
+}
+
+/* Target play and arrow buttons specifically */
+[class*="play"],
+[class*="prev"],
+[class*="next"],
+[class*="arrow"],
+[class*="btn"] {
     filter: brightness(0) invert(1) !important;
 }
 	
@@ -98,6 +106,7 @@ jQuery(document).ready(function(){
     alt: '360 degree view - Brux Night Guard',
     googleEventTracking: false,
   });
+  
   // Force resize to container
   function resizePlayer() {
     var w = jQuery('#content').width();
@@ -110,13 +119,31 @@ jQuery(document).ready(function(){
   resizePlayer();
   jQuery(window).on('resize', resizePlayer);
   
-  // Force white buttons after player loads
-  setTimeout(function() {
-    jQuery('.wr360_player .wr360_toolbar img').css({
-      'filter': 'brightness(0) invert(1)',
-      '-webkit-filter': 'brightness(0) invert(1)'
+  // AGGRESSIVE button color forcing after load
+  function forceWhiteButtons() {
+    jQuery('.wr360_player img').each(function() {
+      jQuery(this).css({
+        'filter': 'brightness(0) invert(1)',
+        '-webkit-filter': 'brightness(0) invert(1)'
+      });
     });
-  }, 500);
+    
+    jQuery('.wr360_player svg, .wr360_player svg *').each(function() {
+      jQuery(this).css({
+        'fill': '#ffffff',
+        'stroke': '#ffffff'
+      });
+    });
+  }
+  
+  // Force multiple times to override viewer's styling
+  setTimeout(forceWhiteButtons, 100);
+  setTimeout(forceWhiteButtons, 500);
+  setTimeout(forceWhiteButtons, 1000);
+  setTimeout(forceWhiteButtons, 2000);
+  
+  // Also force on any click/interaction
+  jQuery('#wr360PlayerId').on('click', forceWhiteButtons);
 });
 </script>
 <!-- End of script copy / paste -->
