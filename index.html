@@ -30,53 +30,43 @@ body, html
 	background: transparent;
 }
 
-/* Wide elliptical platform ring - matching original proportions */
-#content::before {
-    content: '';
-    position: absolute;
-    bottom: 0%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 95%;
-    height: 15%;
-    background: transparent;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    border-radius: 50%;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-    pointer-events: none;
-    z-index: 1;
-}
-
 #wr360PlayerId {
     position: relative;
     z-index: 2;
     background: transparent !important;
 }
 
-/* Force white ONLY on toolbar buttons - NOT product images */
+/* Force white toolbar buttons with multiple selectors */
+.wr360_player .wr360_toolbar a,
+.wr360_player .wr360_toolbar button,
+.wr360_player .wr360_toolbar div[onclick] {
+    filter: brightness(0) invert(1) !important;
+    -webkit-filter: brightness(0) invert(1) !important;
+}
+
 .wr360_player .wr360_toolbar img {
     filter: brightness(0) invert(1) !important;
     -webkit-filter: brightness(0) invert(1) !important;
 }
 
 .wr360_player .wr360_toolbar svg,
-.wr360_player .wr360_toolbar svg * {
+.wr360_player .wr360_toolbar svg *,
+.wr360_player .wr360_toolbar path,
+.wr360_player .wr360_toolbar polygon {
     fill: #ffffff !important;
     stroke: #ffffff !important;
 }
 
-/* Toolbar styling - moved below platform */
+/* Toolbar styling */
 .wr360_player .wr360_toolbar {
     background: transparent !important;
-    position: relative !important;
-    bottom: -40px !important;
-    margin-bottom: -40px !important;
 }
 
 /* Make sure product images are NOT filtered */
 .wr360_player canvas,
 .wr360_player .wr360_viewer img,
-.wr360_player .wr360_viewport img {
+.wr360_player .wr360_viewport img,
+.wr360_player img[src*="brux-night-guard"] {
     filter: none !important;
     -webkit-filter: none !important;
 }
@@ -108,31 +98,34 @@ jQuery(document).ready(function(){
   resizePlayer();
   jQuery(window).on('resize', resizePlayer);
   
-  // Force white buttons ONLY in toolbar, not product images
+  // Aggressive white button forcing - target all toolbar elements
   function forceWhiteButtons() {
-    // Only target toolbar images
-    jQuery('.wr360_player .wr360_toolbar img').css({
-      'filter': 'brightness(0) invert(1)',
-      '-webkit-filter': 'brightness(0) invert(1)'
-    });
-    
-    // Only target toolbar SVGs
-    jQuery('.wr360_player .wr360_toolbar svg, .wr360_player .wr360_toolbar svg *').css({
-      'fill': '#ffffff',
-      'stroke': '#ffffff'
-    });
-    
-    // Ensure product images are NOT filtered
-    jQuery('.wr360_player canvas, .wr360_player .wr360_viewer img, .wr360_player .wr360_viewport img').css({
-      'filter': 'none',
-      '-webkit-filter': 'none'
+    // Find and invert all toolbar buttons/images
+    jQuery('.wr360_player .wr360_toolbar').find('*').each(function() {
+      var $el = jQuery(this);
+      // Skip if it's a product image
+      if (!$el.attr('src') || !$el.attr('src').includes('brux-night-guard')) {
+        if ($el.is('img') || $el.is('a') || $el.is('button') || $el.attr('onclick')) {
+          $el.css({
+            'filter': 'brightness(0) invert(1)',
+            '-webkit-filter': 'brightness(0) invert(1)'
+          });
+        }
+        if ($el.is('svg') || $el.is('path') || $el.is('polygon')) {
+          $el.css({
+            'fill': '#ffffff',
+            'stroke': '#ffffff'
+          });
+        }
+      }
     });
   }
   
-  // Force multiple times to override viewer's styling
+  // Force multiple times
   setTimeout(forceWhiteButtons, 100);
   setTimeout(forceWhiteButtons, 500);
   setTimeout(forceWhiteButtons, 1000);
+  setTimeout(forceWhiteButtons, 2000);
 });
 </script>
 <!-- End of script copy / paste -->
