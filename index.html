@@ -30,21 +30,19 @@ body, html
 	background: transparent;
 }
 
-/* Circular platform effect */
+/* Subtle circular platform ring - like original */
 #content::before {
     content: '';
     position: absolute;
-    bottom: 0%;
+    bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
-    width: 70%;
-    height: 30%;
-    background: radial-gradient(ellipse at center, 
-        rgba(0, 0, 0, 0.75) 0%, 
-        rgba(0, 0, 0, 0.08) 30%, 
-        rgba(0, 0, 0, 0.02) 60%, 
-        transparent 100%);
+    width: 80%;
+    height: 8%;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     pointer-events: none;
     z-index: 1;
 }
@@ -55,20 +53,35 @@ body, html
     background: transparent !important;
 }
 
-/* Force white toolbar buttons */
-.wr360_player .wr360_btn,
-.wr360_player .wr360_toolbar a,
-.wr360_player .wr360_toolbar button,
-.wr360_player svg,
-.wr360_player path {
+/* Force white toolbar buttons - more specific selectors */
+.wr360_player .wr360_toolbar svg,
+.wr360_player .wr360_toolbar path,
+.wr360_player .wr360_toolbar polygon,
+.wr360_player .wr360_toolbar circle,
+.wr360_player .wr360_toolbar rect,
+.wr360_player .wr360_toolbar line {
     fill: #ffffff !important;
-    color: #ffffff !important;
-    opacity: 1 !important;
+    stroke: #ffffff !important;
+}
+
+.wr360_player .wr360_toolbar img {
+    filter: brightness(0) invert(1) !important;
 }
 
 /* Toolbar styling */
 .wr360_player .wr360_toolbar {
     background: transparent !important;
+}
+
+/* Target specific button classes if they exist */
+.wr360_play_btn,
+.wr360_prev_btn,
+.wr360_next_btn,
+.wr360_zoom_in_btn,
+.wr360_zoom_out_btn,
+.wr360_fullscreen_btn,
+.wr360_hotspots_btn {
+    filter: brightness(0) invert(1) !important;
 }
 	
 </style>
@@ -96,6 +109,14 @@ jQuery(document).ready(function(){
   }
   resizePlayer();
   jQuery(window).on('resize', resizePlayer);
+  
+  // Force white buttons after player loads
+  setTimeout(function() {
+    jQuery('.wr360_player .wr360_toolbar img').css({
+      'filter': 'brightness(0) invert(1)',
+      '-webkit-filter': 'brightness(0) invert(1)'
+    });
+  }, 500);
 });
 </script>
 <!-- End of script copy / paste -->
@@ -116,5 +137,3 @@ jQuery(document).ready(function(){
     </div>
 </body>
 </html>
-
-
