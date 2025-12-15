@@ -7,6 +7,7 @@
   align="center,center"
   margin="0,0,0,0"
 />
+  
 <background color="transparent" />
     <preloader image="images/brux-night-guard-0.png" />
     <userInterface showProgressPulse="false" showZoomButtons="true" showToolTips="true" showHotspotsButton="true" showFullScreenButton="true" showTogglePlayButton="true" showArrows="true" toolbarAlign="center" toolbarBackColor="transparent" toolbarHoverColor="#808285" toolbarForeColor="#A7A9AE" toolbarBackAlpha="0" toolbarAlpha="1" showProgressNumbers="false" showFullScreenToolbar="false" fullScreenBackColor="transparent" toolbarPosition="-1" customCursorClass="arrow_zoom_cursor" viewerHint="" toolbarAutohide="true" showToolbarOnLoadStart="false" showProgressBar="false" skin="basic" />
@@ -34,8 +35,8 @@
   allowPanY="true"
   dragAcceleration="1"
   centerZoom="true"
-  maxZoom="180"
-  responsiveBaseWidth="1400"
+  maxZoom="200"
+  responsiveBaseWidth="1600"
 />
     <rotation firstImage="0" rotate="once" rotatePeriod="7" bounce="false" rotateDirection="1" forceDirection="false" inertiaRelToDragSpeed="true" inertiaTimeToStop="700" inertiaMaxInterval="120" useInertia="true" flipHorizontalInput="false" flipVerticalInput="false" bounceRows="true" rowsOnSingleIndex="false" flipAxis="false" spinOnPageScroll="false" pageScrollFollow="false" pageScrollDelay="300" pageScrollPeriod="3" autoPlayOnDragRelease="false" />
   </settings>
@@ -47,7 +48,7 @@
       <spotinfo txt="Soft blue inner material for maximum comfort.&#xA;" css="font-family:Arial;font-size:13px;color:#333333;width:300px;padding:15px 15px;border:1px solid #EEEEEE;background-color:rgba(255,255,255,1);" />
     </hotspot>
   </hotspots>
-  <images rows="1" highresWidth="702" highresHeight="586">
+  <images rows="1" highresWidth="515" highresHeight="320">
     <image src="images/brux-night-guard-0.png">
       <hotspot source="spot2" offsetX="457" offsetY="242" />
       <hotspot source="spot3" offsetX="300" offsetY="207" />
