@@ -34,7 +34,9 @@ body, html
     width: 100%;
     height: 100%;
     border: none;
+	max-height: 600px;
 }
+	
 
 </style>
 
@@ -44,21 +46,33 @@ body, html
     See API sections in the user guide for more details: https://webrotate360.s3.amazonaws.com/sites/webrotate360/downloads/Resources/Readme.pdf
 -->
 
-<script language="javascript" type="text/javascript">
-
+<script type="text/javascript">
 jQuery(document).ready(function(){
 
-    jQuery('#wr360PlayerId').rotator({
-        licenseFileURL: 'license.lic',
-		configFileURL: '360_assets/Brux Night Guard/Brux Night Guard.xml',
-		graphicsPath: 'imagerotator/html/img/basic',
-        alt: '360 degree view - Brux Night Guard',
-        googleEventTracking: false,
-    });
+  var player = jQuery('#wr360PlayerId').rotator({
+    licenseFileURL: 'license.lic',
+    configFileURL: '360_assets/Brux Night Guard/Brux Night Guard.xml',
+    graphicsPath: 'imagerotator/html/img/basic',
+    alt: '360 degree view - Brux Night Guard',
+    googleEventTracking: false,
+  });
+
+  // Force resize to container
+  function resizePlayer() {
+    var w = jQuery('#content').width();
+    var h = jQuery('#content').height();
+    jQuery('#wr360PlayerId').css({ width: w, height: h });
+    if (player && player.resize) {
+      player.resize(w, h);
+    }
+  }
+
+  resizePlayer();
+  jQuery(window).on('resize', resizePlayer);
 
 });
-
 </script>
+
 
 <!-- End of script copy / paste -->
 
@@ -73,7 +87,11 @@ jQuery(document).ready(function(){
 
     <div id="content">
 
-        <div id="wr360PlayerId" class="wr360_player" style="background-color:transparent;">
+        <div
+  id="wr360PlayerId"
+  class="wr360_player"
+  style="width:100%; height:100%; background-color:transparent;">
+
             <div class="stub_banner_wrap" style="height:100%;">
                 <div class="stub_banner">
                     <img src="360_assets/Brux Night Guard/images/brux-night-guard-0.png" alt="" />
@@ -87,3 +105,4 @@ jQuery(document).ready(function(){
 </body>
 
 </html>
+
