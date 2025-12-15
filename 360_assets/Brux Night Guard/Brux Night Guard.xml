@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <config>
   <settings>
     <view
@@ -50,23 +50,23 @@
   </hotspots>
   <images rows="1" highresWidth="515px" highresHeight="320px">
     <image src="images/brux-night-guard-0.png">
-      <hotspot source="spot2" offsetX="457" offsetY="242" />
-      <hotspot source="spot3" offsetX="300" offsetY="207" />
+      <hotspot source="spot2" offsetX="335" offsetY="132" />
+      <hotspot source="spot3" offsetX="220" offsetY="113" />
       <highres src="images/highres/brux-night-guard-0.png" />
     </image>
     <image src="images/brux-night-guard-1.png">
-      <hotspot source="spot2" offsetX="450" offsetY="246" />
-      <hotspot source="spot3" offsetX="293" offsetY="208" />
+      <hotspot source="spot2" offsetX="330" offsetY="134" />
+      <hotspot source="spot3" offsetX="215" offsetY="114" />
       <highres src="images/highres/brux-night-guard-1.png" />
     </image>
     <image src="images/brux-night-guard-2.png">
-      <hotspot source="spot2" offsetX="463" offsetY="250" />
-      <hotspot source="spot3" offsetX="286" offsetY="209" />
+      <hotspot source="spot2" offsetX="340" offsetY="137" />
+      <hotspot source="spot3" offsetX="210" offsetY="114" />
       <highres src="images/highres/brux-night-guard-2.png" />
     </image>
     <image src="images/brux-night-guard-3.png">
-      <hotspot source="spot2" offsetX="458" offsetY="258" />
-      <hotspot source="spot3" offsetX="274" offsetY="206" />
+      <hotspot source="spot2" offsetX="336" offsetY="141" />
+      <hotspot source="spot3" offsetX="201" offsetY="113" />
       <highres src="images/highres/brux-night-guard-3.png" />
     </image>
     <image src="images/brux-night-guard-4.png">
@@ -196,18 +196,18 @@
       <highres src="images/highres/brux-night-guard-45.png" />
     </image>
     <image src="images/brux-night-guard-46.png">
-      <hotspot source="spot2" offsetX="440" offsetY="227" />
-      <hotspot source="spot3" offsetX="327" offsetY="206" />
+      <hotspot source="spot2" offsetX="323" offsetY="124" />
+      <hotspot source="spot3" offsetX="240" offsetY="113" />
       <highres src="images/highres/brux-night-guard-46.png" />
     </image>
     <image src="images/brux-night-guard-47.png">
-      <hotspot source="spot2" offsetX="450" offsetY="232" />
-      <hotspot source="spot3" offsetX="320" offsetY="207" />
+      <hotspot source="spot2" offsetX="330" offsetY="127" />
+      <hotspot source="spot3" offsetX="235" offsetY="113" />
       <highres src="images/highres/brux-night-guard-47.png" />
     </image>
     <image src="images/brux-night-guard-48.png">
-      <hotspot source="spot2" offsetX="461" offsetY="233" />
-      <hotspot source="spot3" offsetX="309" offsetY="207" />
+      <hotspot source="spot2" offsetX="338" offsetY="127" />
+      <hotspot source="spot3" offsetX="227" offsetY="113" />
       <highres src="images/highres/brux-night-guard-48.png" />
     </image>
   </images>
