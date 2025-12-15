@@ -18,6 +18,7 @@ body, html
 	overflow: hidden;
 	margin: 0;
 	padding: 0;
+	background: transparent;
 }
 #content
 {
@@ -26,19 +27,20 @@ body, html
     border: none;
 	max-height: 600px;
 	position: relative;
+	background: transparent;
 }
 
 /* Circular platform effect */
 #content::before {
     content: '';
     position: absolute;
-    bottom: 50%;
+    bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
+    width: 70%;
     height: 30%;
     background: radial-gradient(ellipse at center, 
-        rgba(0, 0, 0, 0.75) 0%, 
+        rgba(0, 0, 0, 0.15) 0%, 
         rgba(0, 0, 0, 0.08) 30%, 
         rgba(0, 0, 0, 0.02) 60%, 
         transparent 100%);
@@ -50,6 +52,23 @@ body, html
 #wr360PlayerId {
     position: relative;
     z-index: 2;
+    background: transparent !important;
+}
+
+/* Force white toolbar buttons */
+.wr360_player .wr360_btn,
+.wr360_player .wr360_toolbar a,
+.wr360_player .wr360_toolbar button,
+.wr360_player svg,
+.wr360_player path {
+    fill: #ffffff !important;
+    color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+/* Toolbar styling */
+.wr360_player .wr360_toolbar {
+    background: transparent !important;
 }
 	
 </style>
@@ -97,5 +116,3 @@ jQuery(document).ready(function(){
     </div>
 </body>
 </html>
-
-
