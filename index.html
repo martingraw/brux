@@ -19,21 +19,39 @@ body, html
 	margin: 0;
 	padding: 0;
 	background: transparent;
+	border: 0 !important;
+	outline: 0 !important;
+	box-shadow: none !important;
 }
 #content
 {
     width: 100%;
     height: 100%;
-    border: none;
+    border: none !important;
 	max-height: 600px;
 	position: relative;
 	background: transparent;
+	outline: 0 !important;
+	box-shadow: none !important;
 }
 
 #wr360PlayerId {
     position: relative;
     z-index: 2;
     background: transparent !important;
+	border: 0 !important;
+	outline: 0 !important;
+	box-shadow: none !important;
+}
+
+/* Remove all possible borders from viewer elements */
+.wr360_player,
+.wr360_player *,
+.wr360_viewer,
+.wr360_viewport {
+	border: 0 !important;
+	outline: 0 !important;
+	box-shadow: none !important;
 }
 
 /* Force white toolbar buttons with multiple selectors */
@@ -78,6 +96,21 @@ body, html
 .wr360_player .wr360_toolbar a,
 .wr360_player .wr360_toolbar button {
     padding: 8px !important;
+}
+
+/* Change hotspot pulse ring color from white to blue */
+.wr360_player .wr360_hotspot_outer,
+.wr360_player .wr360_hotspot_pulse,
+.wr360_player [class*="hotspot"][class*="pulse"],
+.wr360_player [class*="pulse"][class*="outer"] {
+    border-color: #1E90FF !important;
+    background-color: rgba(30, 144, 255, 0.3) !important;
+}
+
+/* Target the pulsing animation elements */
+.wr360_player div[style*="animation"],
+.wr360_player div[style*="opacity"] {
+    border-color: #1E90FF !important;
 }
 
 /* Make sure product images are NOT filtered */
