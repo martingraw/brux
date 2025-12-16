@@ -10,7 +10,7 @@
   
 <background color="transparent" />
     <preloader image="images/brux-night-guard-0.png" />
-    <userInterface showProgressPulse="false" showZoomButtons="true" showToolTips="true" showHotspotsButton="true" showFullScreenButton="true" showTogglePlayButton="true" showArrows="true" toolbarAlign="center" toolbarBackColor="transparent" toolbarHoverColor="#ffffff" toolbarForeColor="#ffffff" toolbarBackAlpha="0" toolbarAlpha="1" showProgressNumbers="false" showFullScreenToolbar="false" fullScreenBackColor="transparent" toolbarPosition="-1" customCursorClass="arrow_zoom_cursor" viewerHint="" toolbarAutohide="false" showToolbarOnLoadStart="false" showProgressBar="false" skin="basic" />
+    <userInterface showProgressPulse="false" showZoomButtons="false" showToolTips="true" showHotspotsButton="false" showFullScreenButton="false" showTogglePlayButton="true" showArrows="true" toolbarAlign="center" toolbarBackColor="transparent" toolbarHoverColor="#ffffff" toolbarForeColor="#ffffff" toolbarBackAlpha="0" toolbarAlpha="1" showProgressNumbers="false" showFullScreenToolbar="false" fullScreenBackColor="transparent" toolbarPosition="-1" customCursorClass="arrow_zoom_cursor" viewerHint="" toolbarAutohide="false" showToolbarOnLoadStart="false" showProgressBar="false" skin="basic" />
 <control
   dragSpeed="0.13"
   doubleClickZooms="true"
@@ -41,10 +41,10 @@
     <rotation firstImage="0" rotate="once" rotatePeriod="7" bounce="false" rotateDirection="1" forceDirection="false" inertiaRelToDragSpeed="true" inertiaTimeToStop="700" inertiaMaxInterval="120" useInertia="true" flipHorizontalInput="false" flipVerticalInput="false" bounceRows="true" rowsOnSingleIndex="false" flipAxis="false" spinOnPageScroll="false" pageScrollFollow="false" pageScrollDelay="300" pageScrollPeriod="3" autoPlayOnDragRelease="false" />
   </settings>
   <hotspots>
-    <hotspot id="spot2" renderMode="0" indicatorImage="hotspot-blue-updated.svg" activateOnClick="true" effects="pulseOuter,1000" margin="0,0,0,0" align="top,center">
+    <hotspot id="spot2" renderMode="0" indicatorImage="hotspot-blue-updated.svg" activateOnClick="true" effects="pulseOuter,2000" margin="0,0,0,0" align="top,center">
       <spotinfo txt="Brux is made from food grade materials that are BPA-free, non-toxic and safe for use as an oral appliance." css="font-family:'Helvetica Neue', Arial, sans-serif;font-size:14px;color:#333333;width:280px;padding:20px 24px;border:1px solid #CCCCCC;border-radius:12px;background:linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,249,250,0.95) 100%);box-shadow:0 8px 24px rgba(0,0,0,0.15);line-height:1.6;backdrop-filter:blur(10px);" />
     </hotspot>
-    <hotspot id="spot3" renderMode="0" indicatorImage="hotspot-blue-updated.svg" activateOnClick="true" effects="pulseOuter,1000" margin="0,0,0,0" align="top,center">
+    <hotspot id="spot3" renderMode="0" indicatorImage="hotspot-blue-updated.svg" activateOnClick="true" effects="pulseOuter,2000" margin="0,0,0,0" align="top,center">
       <spotinfo txt="Soft blue inner material for maximum comfort." css="font-family:'Helvetica Neue', Arial, sans-serif;font-size:14px;color:#333333;width:280px;padding:20px 24px;border:1px solid #CCCCCC;border-radius:12px;background:linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,249,250,0.95) 100%);box-shadow:0 8px 24px rgba(0,0,0,0.15);line-height:1.6;backdrop-filter:blur(10px);" />
     </hotspot>
   </hotspots>
