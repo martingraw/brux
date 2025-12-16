@@ -89,17 +89,21 @@ body, html
     padding: 15px 0 25px 0 !important;
 }
 
-/* Button spacing and sizing - accommodate 28px circular SVGs */
+/* Button spacing and sizing - MORE SPECIFIC to override basic.css */
+.wr360_player .container .theme_panel .toolbar > a,
 .wr360_player .wr360_toolbar a,
 .wr360_player .wr360_toolbar button {
-    margin: 0 10px !important;
+    margin: 5px 10px 0 10px !important;
     padding: 0 !important;
-    display: inline-block !important;
+    display: block !important;
+    float: left !important;
     width: 32px !important;
     height: 32px !important;
+    opacity: 1 !important;
 }
 
 /* Make button icons proper size - 28px SVGs with circles */
+.wr360_player .container .theme_panel .toolbar > a img,
 .wr360_player .wr360_toolbar img {
     width: 32px !important;
     height: 32px !important;
