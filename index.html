@@ -81,29 +81,32 @@ body, html
     stroke: #ffffff !important;
 }
 
-/* Toolbar styling - move up from bottom */
+/* Toolbar styling - move up from bottom and add more space */
 .wr360_player .wr360_toolbar {
     background: transparent !important;
     position: relative !important;
-    margin-top: -50px !important;
-    padding-bottom: 20px !important;
+    margin-top: -60px !important;
+    padding: 15px 0 25px 0 !important;
 }
 
-/* Button spacing and sizing */
+/* Button spacing and sizing - accommodate 28px circular SVGs */
 .wr360_player .wr360_toolbar a,
 .wr360_player .wr360_toolbar button {
-    margin: 0 8px !important;
+    margin: 0 10px !important;
     padding: 0 !important;
     display: inline-block !important;
+    width: 32px !important;
+    height: 32px !important;
 }
 
-/* Make button icons proper size */
+/* Make button icons proper size - 28px SVGs with circles */
 .wr360_player .wr360_toolbar img {
-    width: 28px !important;
-    height: 28px !important;
+    width: 32px !important;
+    height: 32px !important;
     transform: none !important;
     filter: none !important;
     -webkit-filter: none !important;
+    display: block !important;
 }
 
 /* Change hotspot pulse ring color from white to blue */
