@@ -86,16 +86,34 @@ body, html
     background: transparent !important;
 }
 
-/* Make buttons larger */
-.wr360_player .wr360_toolbar img {
-    width: 32px !important;
-    height: 32px !important;
-    transform: scale(1.3);
-}
-
+/* Add circular backgrounds to buttons */
 .wr360_player .wr360_toolbar a,
 .wr360_player .wr360_toolbar button {
-    padding: 8px !important;
+    background: rgba(230, 230, 230, 0.95) !important;
+    border-radius: 50% !important;
+    width: 42px !important;
+    height: 42px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 5px !important;
+    padding: 0 !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+    transition: all 0.2s ease !important;
+}
+
+.wr360_player .wr360_toolbar a:hover,
+.wr360_player .wr360_toolbar button:hover {
+    background: rgba(255, 255, 255, 1) !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) !important;
+    transform: scale(1.08) !important;
+}
+
+/* Make button icons fit nicely inside circles */
+.wr360_player .wr360_toolbar img {
+    width: 20px !important;
+    height: 20px !important;
+    transform: none !important;
 }
 
 /* Change hotspot pulse ring color from white to blue */
