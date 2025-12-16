@@ -81,15 +81,18 @@ body, html
     stroke: #ffffff !important;
 }
 
-/* Toolbar styling */
+/* Toolbar styling - move up from bottom */
 .wr360_player .wr360_toolbar {
     background: transparent !important;
+    position: relative !important;
+    margin-top: -50px !important;
+    padding-bottom: 20px !important;
 }
 
 /* Button spacing and sizing */
 .wr360_player .wr360_toolbar a,
 .wr360_player .wr360_toolbar button {
-    margin: 0 4px !important;
+    margin: 0 8px !important;
     padding: 0 !important;
     display: inline-block !important;
 }
