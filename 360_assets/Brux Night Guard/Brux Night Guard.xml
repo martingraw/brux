@@ -42,15 +42,15 @@
   </settings>
   <hotspots>
     <hotspot id="spot2" renderMode="0" indicatorImage="hotspot-blue-updated.svg" activateOnClick="true" effects="pulseOuter,1000" margin="0,0,0,0" align="top,center">
-      <spotinfo txt="Brux is made from food grade materials that are BPA-free, non-toxic and safe for use as an oral appliance." css="font-family:'Helvetica Neue', Arial, sans-serif;font-size:14px;color:#333333;width:280px;padding:20px 24px;border:none;border-radius:12px;background:linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);box-shadow:0 8px 24px rgba(0,0,0,0.15);line-height:1.6;" />
+      <spotinfo txt="Brux is made from food grade materials that are BPA-free, non-toxic and safe for use as an oral appliance." css="font-family:'Helvetica Neue', Arial, sans-serif;font-size:14px;color:#333333;width:280px;padding:20px 24px;border:1px solid #CCCCCC;border-radius:12px;background:linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,249,250,0.95) 100%);box-shadow:0 8px 24px rgba(0,0,0,0.15);line-height:1.6;backdrop-filter:blur(10px);" />
     </hotspot>
     <hotspot id="spot3" renderMode="0" indicatorImage="hotspot-blue-updated.svg" activateOnClick="true" effects="pulseOuter,1000" margin="0,0,0,0" align="top,center">
-      <spotinfo txt="Soft blue inner material for maximum comfort." css="font-family:'Helvetica Neue', Arial, sans-serif;font-size:14px;color:#333333;width:280px;padding:20px 24px;border:none;border-radius:12px;background:linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);box-shadow:0 8px 24px rgba(0,0,0,0.15);line-height:1.6;" />
+      <spotinfo txt="Soft blue inner material for maximum comfort." css="font-family:'Helvetica Neue', Arial, sans-serif;font-size:14px;color:#333333;width:280px;padding:20px 24px;border:1px solid #CCCCCC;border-radius:12px;background:linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,249,250,0.95) 100%);box-shadow:0 8px 24px rgba(0,0,0,0.15);line-height:1.6;backdrop-filter:blur(10px);" />
     </hotspot>
   </hotspots>
   <images rows="1" highresWidth="515px" highresHeight="320px">
     <image src="images/brux-night-guard-0.png">
-      <hotspot source="spot2" offsetX="335" offsetY="132" />
+      <hotspot source="spot2" offsetX="365" offsetY="132" />
       <hotspot source="spot3" offsetX="220" offsetY="113" />
       <highres src="images/highres/brux-night-guard-0.png" />
     </image>
