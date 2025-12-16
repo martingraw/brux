@@ -85,8 +85,16 @@ body, html
 .wr360_player .wr360_toolbar {
     background: transparent !important;
     position: relative !important;
-    margin-top: -60px !important;
-    padding: 15px 0 25px 0 !important;
+    margin-top: -70px !important;
+    padding: 20px 0 30px 0 !important;
+    overflow: visible !important;
+}
+
+/* Hide the hotspots/up button */
+.wr360_player .wr360_btn_hotspots,
+.wr360_player a[class*="hotspot"],
+.wr360_player button[class*="hotspot"] {
+    display: none !important;
 }
 
 /* Button spacing and sizing - MORE SPECIFIC to override basic.css */
@@ -100,6 +108,7 @@ body, html
     width: 32px !important;
     height: 32px !important;
     opacity: 1 !important;
+    overflow: visible !important;
 }
 
 /* Make button icons proper size - 28px SVGs with circles */
