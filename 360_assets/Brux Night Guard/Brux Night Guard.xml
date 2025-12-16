@@ -28,7 +28,7 @@
   singleClickZooms="false"
   pauseOnPreload="false"
   resumePreloadOnHover="false"
-  mouseWheelDrag="true"
+  mouseWheelDrag="false"
   mouseWheelDragZoomOnly="false"
   allowRotateInputInZoom="false"
   allowPanX="true"
