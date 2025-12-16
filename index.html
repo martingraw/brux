@@ -90,9 +90,25 @@ body, html
     overflow: visible !important;
 }
 
+/* Hide specific unwanted buttons by class name */
 .wr360_player .container .theme_panel .toolbar a.up_button {display: none!important;}
 .wr360_player .container .theme_panel .toolbar a.down_button {display: none!important;}
-	.wr360_player .container .theme_panel .toolbar a.zoomin_button {display: none!important;}
+.wr360_player .container .theme_panel .toolbar a.zoomin_button {display: none!important;}
+
+/* FORCE HIDE all unwanted buttons */
+.wr360_player .wr360_btn_hotspots,
+.wr360_player .wr360_btn_zoom_in,
+.wr360_player .wr360_btn_zoom_out,
+.wr360_player .wr360_btn_fullscreen,
+.wr360_player a[class*="zoom"],
+.wr360_player a[class*="fullscreen"],
+.wr360_player a[class*="hotspot"],
+.wr360_player button[class*="zoom"],
+.wr360_player button[class*="fullscreen"],
+.wr360_player button[class*="hotspot"] {
+    display: none !important;
+    visibility: hidden !important;
+}
 
 /* Button spacing and sizing - MORE SPECIFIC to override basic.css */
 .wr360_player .container .theme_panel .toolbar > a,
@@ -167,8 +183,25 @@ jQuery(document).ready(function(){
       player.resize(w, h);
     }
   }
+  
+  // Debounce function to prevent too many resize calls
+  var resizeTimer;
+  function debouncedResize() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+      resizePlayer();
+    }, 250);
+  }
+  
+  // Initial resize
   resizePlayer();
-  jQuery(window).on('resize', resizePlayer);
+  
+  // Listen to window resize
+  jQuery(window).on('resize', debouncedResize);
+  
+  // Also resize after a short delay to catch late-loading content
+  setTimeout(resizePlayer, 500);
+  setTimeout(resizePlayer, 1000);
   
   // Aggressive white button forcing - target all toolbar elements
   function forceWhiteButtons() {
@@ -218,6 +251,3 @@ jQuery(document).ready(function(){
     </div>
 </body>
 </html>
-
-
-
