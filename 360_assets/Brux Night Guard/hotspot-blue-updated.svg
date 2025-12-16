@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <defs>
+    <radialGradient id="blueGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#5CB3FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E90FF;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Pulsing outer ring - BLUE -->
+  <circle cx="25" cy="25" r="18" fill="none" stroke="#1E90FF" stroke-width="2" opacity="0.8">
+    <animate attributeName="r" from="18" to="24" dur="1s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" from="0.8" to="0" dur="1s" repeatCount="indefinite"/>
+    <animate attributeName="stroke-width" from="2" to="1" dur="1s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Main hotspot circle with gradient -->
+  <circle cx="25" cy="25" r="16" fill="url(#blueGradient)"/>
+  
+  <!-- White inner highlight -->
+  <circle cx="25" cy="25" r="11" fill="white" opacity="0.25"/>
+  
+  <!-- Smaller plus icon that doesn't touch edges -->
+  <g fill="white">
+    <!-- Vertical bar of plus -->
+    <rect x="22.5" y="17" width="5" height="16" rx="1"/>
+    <!-- Horizontal bar of plus -->
+    <rect x="17" y="22.5" width="16" height="5" rx="1"/>
+  </g>
+</svg>
