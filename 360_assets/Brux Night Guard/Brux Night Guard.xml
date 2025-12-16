@@ -41,10 +41,10 @@
     <rotation firstImage="0" rotate="once" rotatePeriod="7" bounce="false" rotateDirection="1" forceDirection="false" inertiaRelToDragSpeed="true" inertiaTimeToStop="700" inertiaMaxInterval="120" useInertia="true" flipHorizontalInput="false" flipVerticalInput="false" bounceRows="true" rowsOnSingleIndex="false" flipAxis="false" spinOnPageScroll="false" pageScrollFollow="false" pageScrollDelay="300" pageScrollPeriod="3" autoPlayOnDragRelease="false" />
   </settings>
   <hotspots>
-    <hotspot id="spot2" renderMode="0" indicatorImage="hotspot-blue.svg" activateOnClick="true" effects="pulse,2000" margin="0,0,0,0" align="top,center">
+    <hotspot id="spot2" renderMode="0" indicatorImage="hotspot-blue.svg" activateOnClick="true" effects="pulseOuter,1000" margin="0,0,0,0" align="top,center">
       <spotinfo txt="Brux is made from food grade materials that are BPA-free, non-toxic and safe for use as an oral appliance. &#xA;&#xA;" css="font-family:Arial;font-size:13px;color:#333333;width:300px;padding:15px 15px;border:1px solid #EEEEEE;background-color:rgba(255,255,255,1);" />
     </hotspot>
-    <hotspot id="spot3" renderMode="0" indicatorImage="hotspot-blue.svg" activateOnClick="true" effects="pulse,2000" margin="0,0,0,0" align="top,center">
+    <hotspot id="spot3" renderMode="0" indicatorImage="hotspot-blue.svg" activateOnClick="true" effects="pulseOuter,1000" margin="0,0,0,0" align="top,center">
       <spotinfo txt="Soft blue inner material for maximum comfort.&#xA;" css="font-family:Arial;font-size:13px;color:#333333;width:300px;padding:15px 15px;border:1px solid #EEEEEE;background-color:rgba(255,255,255,1);" />
     </hotspot>
   </hotspots>
