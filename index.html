@@ -32,7 +32,7 @@ body, html
     width: 100%;
     height: auto;
     aspect-ratio: 515 / 320;
-    max-width: 515px;
+    max-width: 680px;
     margin: 0 auto;
     border: none !important;
 	max-height: 600px;
@@ -126,10 +126,19 @@ body, html
 .wr360_player .pause_button { order: 2 !important; }
 .wr360_player .right_button { order: 3 !important; }
 
-/* Hide specific unwanted buttons by class name */
-.wr360_player .container .theme_panel .toolbar a.up_button {display: none!important;}
-.wr360_player .container .theme_panel .toolbar a.down_button {display: none!important;}
-.wr360_player .container .theme_panel .toolbar a.zoomin_button {display: none!important;}
+/* Hide specific unwanted buttons by class name.
+   These need the SAME high specificity as the ".toolbar > a { display:block }"
+   sizing rule below, or they stay visible AND keep taking flex space, which
+   shoves the real buttons off-center. (fullscreen/hotspot toggles were doing
+   exactly that — invisible but occupying two slots on the left.) */
+.wr360_player .container .theme_panel .toolbar a.up_button,
+.wr360_player .container .theme_panel .toolbar a.down_button,
+.wr360_player .container .theme_panel .toolbar a.zoomin_button,
+.wr360_player .container .theme_panel .toolbar a.zoomout_button,
+.wr360_player .container .theme_panel .toolbar a.fullscreenon_button,
+.wr360_player .container .theme_panel .toolbar a.fullscreenoff_button,
+.wr360_player .container .theme_panel .toolbar a.hotspotson_button,
+.wr360_player .container .theme_panel .toolbar a.hotspotsoff_button {display: none !important;}
 
 /* FORCE HIDE all unwanted buttons */
 .wr360_player .wr360_btn_hotspots,
@@ -150,12 +159,22 @@ body, html
 .wr360_player .container .theme_panel .toolbar > a,
 .wr360_player .wr360_toolbar a,
 .wr360_player .wr360_toolbar button {
-    margin: 5px 5px 0 5px !important;
+    /* No top margin: it pushed the buttons down out of vertical-center and past
+       the toolbar's bottom edge (clipping them). 0 top/bottom + align-items:center
+       keeps the 32px buttons centered in the toolbar. */
+    margin: 0 5px !important;
     padding: 0 !important;
     display: block !important;
     float: left !important;
     width: 32px !important;
     height: 32px !important;
+    /* In the flex toolbar, keep buttons a fixed 32px box so they never shrink
+       horizontally (which clipped the round icons to flat-sided ovals). */
+    flex: 0 0 32px !important;
+    box-sizing: border-box !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
     opacity: 1 !important;
     overflow: visible !important;
 }
