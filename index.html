@@ -13,9 +13,13 @@
 /*-- Use #content CSS to customize size, position, border, etc of your 360 view --*/
 body, html
 {
-	height: 100%;
+	/* height is intentionally NOT 100% -- letting the page be as tall as the
+	   viewer (#content) avoids a tall viewport leaving large empty white space
+	   below the guard on mobile. overflow-x:hidden prevents any horizontal
+	   scroll; vertical overflow is left visible so an open hotspot popup that
+	   extends past the viewer isn't clipped. */
 	width: 100%;
-	overflow: hidden;
+	overflow-x: hidden;
 	margin: 0;
 	padding: 0;
 	background: transparent;
@@ -26,7 +30,10 @@ body, html
 #content
 {
     width: 100%;
-    height: 100%;
+    height: auto;
+    aspect-ratio: 515 / 320;
+    max-width: 515px;
+    margin: 0 auto;
     border: none !important;
 	max-height: 600px;
 	position: relative;
@@ -52,6 +59,21 @@ body, html
 	border: 0 !important;
 	outline: 0 !important;
 	box-shadow: none !important;
+}
+
+/* Clean load: keep the loading placeholder image OUT of normal flow.
+   Otherwise the placeholder occupies full height and the interactive viewer
+   renders stacked BELOW it during load (two guards stacked vertically), then
+   jumps up when the placeholder is hidden. Absolute-positioning it makes the
+   viewer render in the same spot so the swap is a clean in-place fade. */
+.wr360_player .stub_banner_wrap {
+	position: absolute !important;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 100% !important;
+	z-index: 1;
 }
 
 /* Force white toolbar buttons with multiple selectors */
@@ -89,6 +111,20 @@ body, html
     padding: 20px 0 30px 0 !important;
     overflow: visible !important;
 }
+
+/* Lay the toolbar out as a centered flex row and reorder so the
+   play/pause toggle sits in the MIDDLE: rotate-left, play/pause, rotate-right */
+.wr360_player .wr360_toolbar,
+.wr360_player .toolbar {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+.wr360_player .left_button  { order: 1 !important; }
+.wr360_player .play_button,
+.wr360_player .pause_button { order: 2 !important; }
+.wr360_player .right_button { order: 3 !important; }
 
 /* Hide specific unwanted buttons by class name */
 .wr360_player .container .theme_panel .toolbar a.up_button {display: none!important;}
@@ -158,7 +194,57 @@ body, html
     filter: none !important;
     -webkit-filter: none !important;
 }
-	
+
+/* --- Hotspot popup card --- */
+/* The ".wr360_player * { border:0 !important; box-shadow:none !important }" reset
+   above strips the card's border/shadow (and the title divider). Re-assert them here
+   with higher specificity + !important so they actually show on the visible card box.
+   The card box is the direct <div> child of .hotspot_rollover (carries the inline css attr). */
+.wr360_player .hotspot_rollover > div {
+    border: 1px solid #d0d0d0 !important;
+    border-radius: 14px !important;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25) !important;
+    background: #ffffff !important;
+}
+.wr360_player .hotspot_rollover .bng-eyebrow {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #f96d20;
+    margin: 0 0 6px 0;
+}
+.wr360_player .hotspot_rollover .bng-title {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.3;
+    padding-bottom: 10px;
+    margin: 0 0 12px 0;
+    border-bottom: 1px solid #cfcfcf !important;
+}
+.wr360_player .hotspot_rollover .bng-body {
+    display: block;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #444444;
+    margin: 0 0 16px 0;
+}
+.wr360_player .hotspot_rollover .bng-buy,
+.wr360_player .hotspot_rollover .bng-buy:link,
+.wr360_player .hotspot_rollover .bng-buy:visited {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #f96d20 !important;
+    text-decoration: none;
+}
+.wr360_player .hotspot_rollover .bng-buy:hover {
+    text-decoration: underline;
+}
+
 </style>
 <!-- 
     Copy this script block and paste under your page <head> section or somewhere inside your page <body>.
@@ -174,34 +260,45 @@ jQuery(document).ready(function(){
     googleEventTracking: false,
   });
   
-  // Force resize to container
+  // Sync the player element to the container size.
   function resizePlayer() {
     var w = jQuery('#content').width();
     var h = jQuery('#content').height();
     jQuery('#wr360PlayerId').css({ width: w, height: h });
-    if (player && player.resize) {
-      player.resize(w, h);
-    }
   }
-  
+
+  // WebRotate only re-fits its image to the container on a real window 'resize'
+  // event -- NOT when the container is resized programmatically, and NOT when the
+  // viewport width changes after init (e.g. opening Chrome's device toolbar, a
+  // phone settling its layout, or an iframe being sized by the host page). In
+  // those cases the image stays sized to the initial width and gets pushed off /
+  // cropped to the right until you manually resize. Firing a synthetic resize
+  // forces WebRotate to re-fit so the guard stays centered and fully visible.
+  // (The old code called player.resize(w,h) here, but `player` is a jQuery object
+  // so that hit jQuery's .resize() event binder and threw -- it never resized.)
+  function nudgeRefit() {
+    resizePlayer();
+    window.dispatchEvent(new Event('resize'));
+  }
+
   // Debounce function to prevent too many resize calls
   var resizeTimer;
   function debouncedResize() {
     clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(function() {
-      resizePlayer();
-    }, 250);
+    resizeTimer = setTimeout(resizePlayer, 250);
   }
-  
+
   // Initial resize
   resizePlayer();
-  
+
   // Listen to window resize
   jQuery(window).on('resize', debouncedResize);
-  
-  // Also resize after a short delay to catch late-loading content
-  setTimeout(resizePlayer, 500);
-  setTimeout(resizePlayer, 1000);
+
+  // Force a re-fit after load settles, to catch late layout / viewport changes
+  // (device toolbar, late-loading frames, host iframe sizing).
+  setTimeout(nudgeRefit, 300);
+  setTimeout(nudgeRefit, 800);
+  setTimeout(nudgeRefit, 1500);
   
   // Aggressive white button forcing - target all toolbar elements
   function forceWhiteButtons() {

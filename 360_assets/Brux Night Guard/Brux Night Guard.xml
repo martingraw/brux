@@ -3,7 +3,7 @@
   <settings>
     <view
   fitToViewport="true"
-  scaleMode="fill"
+  scaleMode="fit"
   align="center,center"
   margin="0,0,0,0"
 />
@@ -42,31 +42,38 @@
   </settings>
   <hotspots>
     <hotspot id="spot2" renderMode="0" indicatorImage="hotspot-blue-updated.svg" activateOnClick="true" effects="pulseOuter,1000" margin="0,0,0,0" align="top,center">
-      <spotinfo txt="&lt;strong style='color:#5a9abe;font-size:18px;text-transform:uppercase;'&gt;Safe Materials&lt;/strong&gt;&lt;br/&gt;• BPA-free and non-toxic&lt;br/&gt;• Food-grade materials&lt;br/&gt;• Safe for oral use&lt;br/&gt;• FDA compliant" css="font-family:'Helvetica Neue', Arial, sans-serif;font-size:14px;color:#333333;width:280px;padding:20px 24px;border:1px solid #CCCCCC;border-radius:12px;background:linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,249,250,0.95) 100%);box-shadow:0 8px 24px rgba(0,0,0,0.15);line-height:1.6;backdrop-filter:blur(10px);" />
+      <spotinfo txt="&lt;span class='bng-eyebrow'&gt;SAFE MATERIALS&lt;/span&gt;&lt;span class='bng-title'&gt;Built From Two Materials&lt;/span&gt;&lt;span class='bng-body'&gt;Made with two materials — firmer on the outside for durability, softer on the inside so it's gentle on your teeth and gums. Not too hard, not too soft.&lt;/span&gt;&lt;a class='bng-buy' href='https://www.bruxnightguard.com/products/brux-night-guard' target='_blank'&gt;Buy Now »&lt;/a&gt;" css="font-family:'Helvetica Neue', Arial, sans-serif;color:#333333;width:300px;max-width:90vw;box-sizing:border-box;padding:22px 24px;border:1px solid #e3e3e3;border-radius:12px;background:#ffffff;box-shadow:0 4px 18px rgba(0,0,0,0.12);line-height:1.6;text-align:left;" />
     </hotspot>
     <hotspot id="spot3" renderMode="0" indicatorImage="hotspot-blue-updated.svg" activateOnClick="true" effects="pulseOuter,1000" margin="0,0,0,0" align="top,center">
-      <spotinfo txt="&lt;strong style='color:#5a9abe;font-size:18px;text-transform:uppercase;'&gt;Comfort Features&lt;/strong&gt;&lt;br/&gt;• Soft blue inner material&lt;br/&gt;• Maximum comfort&lt;br/&gt;• Custom moldable fit&lt;br/&gt;• Reduces jaw tension" css="font-family:'Helvetica Neue', Arial, sans-serif;font-size:14px;color:#333333;width:280px;padding:20px 24px;border:1px solid #CCCCCC;border-radius:12px;background:linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,249,250,0.95) 100%);box-shadow:0 8px 24px rgba(0,0,0,0.15);line-height:1.6;backdrop-filter:blur(10px);" />
+      <spotinfo txt="&lt;span class='bng-eyebrow'&gt;ENGINEERED TO FIT&lt;/span&gt;&lt;span class='bng-title'&gt;Small, Custom, Comfortable&lt;/span&gt;&lt;span class='bng-body'&gt;A smaller design that covers just the front teeth — more comfortable and less gagging than bulky full-mouth guards. Boil-and-bite moldable at home, and re-moldable anytime. Wear it on top or bottom.&lt;/span&gt;&lt;a class='bng-buy' href='https://www.bruxnightguard.com/products/brux-night-guard' target='_blank'&gt;Buy Now »&lt;/a&gt;" css="font-family:'Helvetica Neue', Arial, sans-serif;color:#333333;width:300px;max-width:90vw;box-sizing:border-box;padding:22px 24px;border:1px solid #e3e3e3;border-radius:12px;background:#ffffff;box-shadow:0 4px 18px rgba(0,0,0,0.12);line-height:1.6;text-align:left;" />
+    </hotspot>
+    <hotspot id="spot4" renderMode="0" indicatorImage="hotspot-blue-updated.svg" activateOnClick="true" effects="pulseOuter,1000" margin="0,0,0,0" align="top,center">
+      <spotinfo txt="&lt;span class='bng-eyebrow'&gt;TRUSTED &amp;amp; AFFORDABLE&lt;/span&gt;&lt;span class='bng-title'&gt;Dentist-Quality for Less&lt;/span&gt;&lt;span class='bng-body'&gt;Relief from grinding and clenching for about $59 — a fraction of the ~$600 typically charged by dentists. FDA cleared and made in the USA.&lt;/span&gt;&lt;a class='bng-buy' href='https://www.bruxnightguard.com/products/brux-night-guard' target='_blank'&gt;Buy Now »&lt;/a&gt;" css="font-family:'Helvetica Neue', Arial, sans-serif;color:#333333;width:300px;max-width:90vw;box-sizing:border-box;padding:22px 24px;border:1px solid #e3e3e3;border-radius:12px;background:#ffffff;box-shadow:0 4px 18px rgba(0,0,0,0.12);line-height:1.6;text-align:left;" />
     </hotspot>
   </hotspots>
   <images rows="1" highresWidth="515px" highresHeight="320px">
     <image src="images/brux-night-guard-0.png">
       <hotspot source="spot2" offsetX="365" offsetY="132" />
-      <hotspot source="spot3" offsetX="220" offsetY="113" />
+      <hotspot source="spot3" offsetX="150" offsetY="135" />
+      <hotspot source="spot4" offsetX="257" offsetY="175" />
       <highres src="images/highres/brux-night-guard-0.png" />
     </image>
     <image src="images/brux-night-guard-1.png">
       <hotspot source="spot2" offsetX="330" offsetY="134" />
-      <hotspot source="spot3" offsetX="215" offsetY="114" />
+      <hotspot source="spot3" offsetX="145" offsetY="135" />
+      <hotspot source="spot4" offsetX="252" offsetY="176" />
       <highres src="images/highres/brux-night-guard-1.png" />
     </image>
     <image src="images/brux-night-guard-2.png">
       <hotspot source="spot2" offsetX="340" offsetY="137" />
-      <hotspot source="spot3" offsetX="210" offsetY="114" />
+      <hotspot source="spot3" offsetX="140" offsetY="137" />
+      <hotspot source="spot4" offsetX="248" offsetY="177" />
       <highres src="images/highres/brux-night-guard-2.png" />
     </image>
     <image src="images/brux-night-guard-3.png">
       <hotspot source="spot2" offsetX="336" offsetY="141" />
-      <hotspot source="spot3" offsetX="201" offsetY="113" />
+      <hotspot source="spot3" offsetX="131" offsetY="138" />
+      <hotspot source="spot4" offsetX="243" offsetY="178" />
       <highres src="images/highres/brux-night-guard-3.png" />
     </image>
     <image src="images/brux-night-guard-4.png">
@@ -197,17 +204,20 @@
     </image>
     <image src="images/brux-night-guard-46.png">
       <hotspot source="spot2" offsetX="323" offsetY="124" />
-      <hotspot source="spot3" offsetX="240" offsetY="113" />
+      <hotspot source="spot3" offsetX="170" offsetY="130" />
+      <hotspot source="spot4" offsetX="270" offsetY="176" />
       <highres src="images/highres/brux-night-guard-46.png" />
     </image>
     <image src="images/brux-night-guard-47.png">
       <hotspot source="spot2" offsetX="330" offsetY="127" />
-      <hotspot source="spot3" offsetX="235" offsetY="113" />
+      <hotspot source="spot3" offsetX="165" offsetY="130" />
+      <hotspot source="spot4" offsetX="268" offsetY="175" />
       <highres src="images/highres/brux-night-guard-47.png" />
     </image>
     <image src="images/brux-night-guard-48.png">
       <hotspot source="spot2" offsetX="338" offsetY="127" />
-      <hotspot source="spot3" offsetX="227" offsetY="113" />
+      <hotspot source="spot3" offsetX="157" offsetY="130" />
+      <hotspot source="spot4" offsetX="263" offsetY="175" />
       <highres src="images/highres/brux-night-guard-48.png" />
     </image>
   </images>
